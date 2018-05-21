@@ -22,22 +22,20 @@
         });
 
         function GetRecognizeResult(Result, Type) {
-            if (Result.includes("好熱")|| Result.includes("我知道你熱")) {
+            if (Result.includes("快樂頌")|| Result.includes("快樂頌播放中")) {
                 document.getElementById("words").innerHTML = Result;
-                cpf.SetSpeech("On", "cmn-Hant-TW", "風扇來囉", 1, 2);
-                for (i = 0; i < 255; i += 10) {  //風扇漸快
-                    cpf.request('["analogWrite", 6, ' + i + ']');
-                }
-            } else if (Result.includes("好冷") || Result.includes("如果你冷")) {
+                cpf.SetSpeech("On", "cmn-Hant-TW", "音樂來囉", 1, 2);
+                cpf.request('["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 698, 300],["sleep", 500], ["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 698, 300],["sleep", 500], ["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 587, 300],["sleep", 500],["tone_play", 6, 523, 300],["sleep", 500],["tone_play", 6, 523, 300],["sleep", 500],["tone_play", 6, 587, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500], ["tone_play", 6, 587, 300],["sleep", 500],["tone_play", 6, 587, 300]');
+            } else if (Result.includes("告白氣球") || Result.includes("告白氣球播放中")) {
                 document.getElementById("words").innerHTML = Result;
-                cpf.SetSpeech("On", "cmn-Hant-TW", "已幫您關電扇了", 1, 1);
-                cpf.request('["analogWrite", 6, 0]'); //停止風扇
+                cpf.SetSpeech("On", "cmn-Hant-TW", "音樂來囉", 1, 1);
+                cpf.request('["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 698, 300],["sleep", 500], ["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 698, 300],["sleep", 500], ["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 587, 300],["sleep", 500],["tone_play", 6, 523, 300],["sleep", 500],["tone_play", 6, 523, 300],["sleep", 500],["tone_play", 6, 587, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500], ["tone_play", 6, 587, 300],["sleep", 500],["tone_play", 6, 587, 300]');
             }
         }
 
         function setup() {
             if (cpf)
-                cpf.setPinMode('["resetPin"], ["setPinMode", "digital", 6, "PWM"]');
+            cpf.setPinMode('["resetPin"],["setPinMode", "digital", 6, "TONE"] ');
         }
         
     </script>
