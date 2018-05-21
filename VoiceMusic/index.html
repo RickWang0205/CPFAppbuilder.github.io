@@ -7,7 +7,7 @@
     <title>Control The Music</title>
 </head>
 <body>
-    <h1>Control Your Fan</h1>
+    <h1>Control The Music</h1>
     <button id="clickbtn">呼叫AI</button>
     <br/>
     <p id="words">none</p>
@@ -29,7 +29,7 @@
             } else if (Result.includes("國旗歌") || Result.includes("國旗歌播放中")) {
                 document.getElementById("words").innerHTML = Result;
                 cpf.SetSpeech("On", "cmn-Hant-TW", "全體肅立", 1, 1);
-                cpf.request('["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 523, 300],["sleep", 100],["tone_play", 6, 659, 300],["sleep", 500], ["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 1046, 300],["sleep", 500], ["tone_play", 6, 988, 300],["sleep", 100],["tone_play", 6, 880, 300],["sleep", 500],["tone_play", 6, 880, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 880, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500], ["tone_play", 6, 659, 300],["sleep", 100],["tone_play", 6, 523, 300],["sleep", 300],["tone_play", 6, 698, 300],["sleep", 100],["tone_play", 6, 698, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 587, 300]');
+                cpf.request('["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 523, 300],["sleep", 200],["tone_play", 6, 659, 300],["sleep", 500], ["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 1046, 300],["sleep", 500], ["tone_play", 6, 988, 300],["sleep", 200],["tone_play", 6, 880, 300],["sleep", 500],["tone_play", 6, 880, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 880, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500],["tone_play", 6, 784, 300],["sleep", 500], ["tone_play", 6, 659, 300],["sleep", 200],["tone_play", 6, 523, 300],["sleep", 300],["tone_play", 6, 698, 300],["sleep", 200],["tone_play", 6, 698, 300],["sleep", 500],["tone_play", 6, 659, 300],["sleep", 500],["tone_play", 6, 587, 300]');
             }
         }
 
